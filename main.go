@@ -1,6 +1,6 @@
 package main
 
-import "github.com/miltlima/goactions-cli/cmd"
+import "github.com/miltlima/goact/cmd"
 
 func main() {
 	cmd.Execute()

@@ -1,23 +1,24 @@
-package main
+package cmd
 
 import (
 	"fmt"
+
+	"github.com/miltlima/goact/pkg"
 	"github.com/spf13/cobra"
-	"github.com/miltlima/goactions-cli/pkg"
 )
 
 var stack string
 
 var rootCmd = &cobra.Command{
-	Use: "goactions",
+	Use:   "goact",
 	Short: "Tool for creating default file for Github Actions ",
 }
 
 var createCmd = &cobra.Command{
-	Use: "create",
+	Use:   "create",
 	Short: "Create a new Github action configuration for stack specified",
-	Args: cobra.ExactArgs(1),
-	Run: func(cmd. *cobra.Command, args []string)  {
+	Args:  cobra.ExactArgs(1),
+	Run: func(cmd *cobra.Command, args []string) {
 		stack = args[0]
 		actionsConfig, err := pkg.GenerateGithubActionsConfig(stack)
 		if err != nil {
@@ -38,13 +39,13 @@ var createCmd = &cobra.Command{
 func init() {
 	createCmd.Flags().StringVarP(&stack, "stack", "s", "", "Define the stack (node.js, python and others)")
 	createCmd.MarkFlagRequired("stack")
-	
+
 	rootCmd.AddCommand(createCmd)
 }
 
-func main() {
+func Execute() {
 	if err := createCmd.Execute(); err != nil {
 
-			fmt.Println(err)
-		}
+		fmt.Println(err)
+	}
 }

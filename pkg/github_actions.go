@@ -5,7 +5,7 @@ import (
 	"io/ioutil"
 	"os"
 
-	"github.com/miltlima/goactions-cli/pkg/stacks"
+	"github.com/miltlima/goact/pkg/stacks"
 )
 
 type GitHubActionsConfig string
