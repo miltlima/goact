@@ -17,15 +17,16 @@ var rootCmd = &cobra.Command{
 var createCmd = &cobra.Command{
 	Use:   "create",
 	Short: "Create a new Github action configuration for stack specified",
-	Args:  cobra.ExactArgs(1),
 	Run: func(cmd *cobra.Command, args []string) {
-		stack = args[0]
+		if stack == "" {
+			fmt.Println("Error: you need pass the flag -s or --stack.")
+			return
+		}
 		actionsConfig, err := pkg.GenerateGithubActionsConfig(stack)
 		if err != nil {
 			fmt.Println(err)
 			return
 		}
-		fmt.Println(actionsConfig)
 
 		err = pkg.CreateGithubActionsFiles(stack, string(actionsConfig))
 		if err != nil {
@@ -38,14 +39,12 @@ var createCmd = &cobra.Command{
 
 func init() {
 	createCmd.Flags().StringVarP(&stack, "stack", "s", "", "Define the stack (node.js, python and others)")
-	createCmd.MarkFlagRequired("stack")
 
 	rootCmd.AddCommand(createCmd)
 }
 
 func Execute() {
-	if err := createCmd.Execute(); err != nil {
-
+	if err := rootCmd.Execute(); err != nil {
 		fmt.Println(err)
 	}
 }
