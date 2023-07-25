@@ -1,7 +1,6 @@
 package stacks
 
-const Ruby = `
-name: CI
+const Ruby = `name: CI
 
 on:
   push:

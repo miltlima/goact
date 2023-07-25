@@ -1,7 +1,6 @@
 package stacks
 
-const Golang = `
-name: CI
+const Golang = `name: CI
 
 on:
   push:

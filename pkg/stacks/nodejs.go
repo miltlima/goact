@@ -1,7 +1,6 @@
 package stacks
 
-const NodeJS = `
-name: Node.js CI
+const NodeJS = `name: CI
 
 on: 
   push:

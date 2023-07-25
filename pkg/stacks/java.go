@@ -1,7 +1,6 @@
 package stacks
 
-const Java = `
-name: CI
+const Java = `name: CI
 
 on: 
   push:
