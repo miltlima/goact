@@ -1,10 +1,10 @@
-# Goact Documentation
+# Documentation
 
 Goact is a command-line tool (CLI) that enables you to create pipeline stacks to automate workflows on GitHub Actions.
 
 ## Installation
 
-To use Goact, follow the steps below to install it on your system:
+ Follow the steps below to install:
 
 1. Download the Goact source code or clone the GitHub repository.
 
