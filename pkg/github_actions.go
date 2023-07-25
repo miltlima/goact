@@ -16,6 +16,12 @@ func GenerateGithubActionsConfig(stack string) (GitHubActionsConfig, error) {
 		return GitHubActionsConfig(stacks.NodeJS), nil
 	case "python":
 		return GitHubActionsConfig(stacks.Python), nil
+	case "ruby":
+		return GitHubActionsConfig(stacks.Ruby), nil
+	case "golang":
+		return GitHubActionsConfig(stacks.Golang), nil
+	case "java":
+		return GitHubActionsConfig(stacks.Java), nil
 	default:
 		return "", fmt.Errorf("Stack '%s' is not supported.", stack)
 	}
