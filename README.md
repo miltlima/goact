@@ -39,3 +39,11 @@ Replace <STACK_NAME> with the name of the stack you want to create, for example,
 ```bash
 goact create --stack node.js
 ```
+
+## Optional
+
+Optionally, you can create dockerfile with stack desired for you projects per example you choose ruby as a stack add the flag -d will create a dockerfile for ruby
+
+```bash
+goact create --stack ruby -d 
+```
