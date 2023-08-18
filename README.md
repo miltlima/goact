@@ -1,3 +1,7 @@
+[!["Buy Me A Coffee"](https://img.shields.io/badge/Buy_Me_A_Coffee-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://www.buymeacoffee.com/miltlima)
+
+# goact cli
+
 # Documentation
 
 Goact is a command-line tool (CLI) that enables you to create pipeline stacks to automate workflows on GitHub Actions.
