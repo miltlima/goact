@@ -1,10 +1,14 @@
-# Goact Documentation
+[!["Buy Me A Coffee"](https://img.shields.io/badge/Buy_Me_A_Coffee-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://www.buymeacoffee.com/miltlima)
+
+# goact cli
+
+# Documentation
 
 Goact is a command-line tool (CLI) that enables you to create pipeline stacks to automate workflows on GitHub Actions.
 
 ## Installation
 
-To use Goact, follow the steps below to install it on your system:
+ Follow the steps below to install:
 
 1. Download the Goact source code or clone the GitHub repository.
 
@@ -38,4 +42,12 @@ Replace <STACK_NAME> with the name of the stack you want to create, for example,
 
 ```bash
 goact create --stack node.js
+```
+
+## Optional
+
+Optionally, you can create dockerfile with stack desired for you projects per example you choose ruby as a stack add the flag -d will create a dockerfile for ruby
+
+```bash
+goact create --stack ruby -d 
 ```
